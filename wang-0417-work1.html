@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好看的单页网站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #fff;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+        /* 导航栏 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(0,0,0,0.25);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top:0;
+            z-index:99;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4cc9f0;
+        }
+        .nav-links a {
+            color: #e2e2e2;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: #4cc9f0;
+        }
+        /* 首页横幅 */
+        .hero {
+            padding: 100px 8%;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #c9c9c9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: #4361ee;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
+        }
+        .btn:hover {
+            transform: translateY(-4px);
+            background: #4cc9f0;
+        }
+        /* 卡片区域 */
+        .container {
+            padding: 60px 8%;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+        .card-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: rgba(255,255,255,0.08);
+            padding: 35px 25px;
+            border-radius: 18px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.12);
+        }
+        .card h3 {
+            font-size: 22px;
+            margin-bottom:15px;
+            color:#4cc9f0;
+        }
+        .card p {
+            color:#d1d1d1;
+            line-height:1.7;
+        }
+        /* 页脚 */
+        footer {
+            text-align:center;
+            padding:30px;
+            margin-top:40px;
+            color:#aaa;
+            background:rgba(0,0,0,0.2);
+        }
+        /* 手机适配 */
+        @media(max-width:768px){
+            .nav-links a{margin-left:15px;}
+            .hero h1{font-size:32px;}
+        }
+    </style>
+</head>
+<body>
+    <!--导航-->
+    <nav>
+        <div class="logo">MyWeb</div>
+        <div class="nav-links">
+            <a href="#home">首页</a>
+            <a href="#cards">介绍</a>
+            <a href="#footer">联系</a>
+        </div>
+    </nav>
+
+    <!--首页区块-->
+    <section class="hero" id="home">
+        <h1>欢迎来到我的网页</h1>
+        <p>这是一个现代风格单页网站，玻璃拟态卡片，渐变背景，支持手机访问，代码简洁可直接修改。</p>
+        <a href="#cards" class="btn">查看更多</a>
+    </section>
+
+    <!--卡片区块-->
+    <section class="container" id="cards">
+        <h2 class="section-title">功能卡片</h2>
+        <div class="card-wrap">
+            <div class="card">
+                <h3>简洁美观</h3>
+                <p>玻璃拟态风格，柔和渐变，hover悬浮动画，视觉效果高级。</p>
+            </div>
+            <div class="card">
+                <h3>响应式</h3>
+                <p>自动适配电脑、平板、手机，在不同设备都能正常显示。</p>
+            </div>
+            <div class="card">
+                <h3>容易修改</h3>
+                <p>全部代码写在一个文件，文字、颜色、卡片内容直接改HTML即可。</p>
+            </div>
+        </div>
+    </section>
+
+    <!--页脚-->
+    <footer id="footer">
+        <p>© 2026 MyWeb 示例网站</p>
+    </footer>
+</body>
+</html>
